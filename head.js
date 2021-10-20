@@ -5,9 +5,14 @@ const assertEqual = function (actual, expected) {
     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
-
+const head = function(array) {
+  if (array.length >= 1) {
+    return array[0];
+  } else {
+    return;
+  }
+};
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Lighthouse Labs", "Lighthouse Labs");
-assertEqual(1, 1.1);
-assertEqual(1, 1);
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+console.log(head([]));
