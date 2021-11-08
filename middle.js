@@ -3,6 +3,9 @@
 // if array has odd number of elements, then output should be one value in the middle
 // HOWEVER, if array has one or two elements then ouput empty array
 const middle = function(array) {
+  if (!(Array.isArray(array))) {
+    return;
+  }
   const returnedArray = [];
   if (array.length <= 2) {
     return returnedArray;
