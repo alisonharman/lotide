@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@aharman/lotide",
   "version": "1.0.0",
-  "description": "my Lodash (lite) version!",
-  "main": "assertArraysEqual.js",
+  "description": "my student version of Lodash (lite)!",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/alisonharman/lotide.git"
   },
-  "author": "Alison",
+  "author": "A Harman",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alisonharman/lotide/issues"
