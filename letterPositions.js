@@ -1,24 +1,6 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-const assertArraysEqual = function(actual, expected) {
-  let areEqual = false; // initializing boolean
-  areEqual = eqArrays(actual, expected);
-  if (areEqual) {
-    console.log(`👍👍👍 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
+// takes in a string and returns an object that gives all the idices in the string where each character is found
 const letterPositions = function(sentence) {
   const results = {};
   for (let i = 0; i < sentence.length; i++) {
@@ -33,5 +15,7 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
+module.exports = letterPositions;
+
 assertArraysEqual(letterPositions("hello").e, [1]);
 assertArraysEqual(letterPositions("hello").l, [2,3]);
