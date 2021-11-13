@@ -21,7 +21,3 @@ const flatten = function(array) {
 };
 
 module.exports = flatten;
-//TEST
-console.log(flatten("string")); // should return undefined
-assertArraysEqual((flatten([1, 2, [3, 4], 5, [6]])), [1, 2, 3, 4, 5, 6]); // should equal
-assertArraysEqual((flatten(["pigs", ["ducks", "chickens"]])), ["pigs", "ducks", "sheep"]); //should not pass
