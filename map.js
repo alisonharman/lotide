@@ -1,3 +1,4 @@
+const assertArraysEqual = require('./assertArraysEqual');
 
 const map = function(array, callback) {
   const results = [];
@@ -6,27 +7,9 @@ const map = function(array, callback) {
   }
   return results;
 };
-// function to compare if two arrays are a perfect match
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-const assertArraysEqual = function(actual, expected) {
-  let areEqual = false; // initializing boolean
-  areEqual = eqArrays(actual, expected);
-  if (areEqual) {
-    console.log(`👍👍👍 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+
+module.exports = map;
+
 // TEST CODE
 //const results1 = map(words, word => word[0]);
 //TEST CODE #1
