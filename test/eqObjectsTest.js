@@ -45,22 +45,3 @@ describe('#eqObjects', () => {
 
 
 });
-
-
-/*
-//console.log(eqObjects(ab, ba)); // => true
-assertEqual(eqObjects(ab, ba), true);
-
-const abc = { a: "1", b: "2", c: "3" };
-//eqObjects(ab, abc); // => false
-assertEqual(eqObjects(ab, abc), false);
-
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-//eqObjects(cd, dc); // => true
-assertEqual(eqObjects(cd, dc), true);
-
-const cd2 = { c: "1", d: ["2", 3, 4] };
-//eqObjects(cd, cd2); // => false
-assertEqual(eqObjects(cd, cd2), false);
-*/
