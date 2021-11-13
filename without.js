@@ -1,3 +1,5 @@
+const assertArraysEqual = require('./assertArraysEqual');
+
 // function takes in two arrays
 // first is the source array and second should be 'items to remove array'
 // returns new array of [source] - [second array]
@@ -13,27 +15,8 @@ const without = function(source, itemsToRemove) {
   }
   return arrayWithRemovedElements;
 };
-const assertArraysEqual = function(actual, expected) {
-  let areEqual = false; // initializing boolean
-  areEqual = eqArrays(actual, expected);
-  if (areEqual) {
-    console.log(`👍👍👍 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-// function to compare if two arrays are a perfect match
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+
+module.exports = without;
 
 //TEST CODE
 //console.log(without([1, 2, 3], [1, 1])) // => [2, 3]
