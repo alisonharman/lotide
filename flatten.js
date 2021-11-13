@@ -1,5 +1,3 @@
-const assertArraysEqual = require('./assertArraysEqual');
-
 // takes in array and flattens it so there are no nested array elements
 // note: only assumes one level of nesting
 // returns undefined if not an array
