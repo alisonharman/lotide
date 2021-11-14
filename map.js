@@ -1,5 +1,3 @@
-const assertArraysEqual = require('./assertArraysEqual');
-
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -10,8 +8,9 @@ const map = function(array, callback) {
 
 module.exports = map;
 
+/*
 // TEST CODE
-//const results1 = map(words, word => word[0]);
+const assertArraysEqual = require('./assertArraysEqual');
 //TEST CODE #1
 const words = ["ground", "control", "to", "major", "tom"];
 assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
@@ -23,5 +22,6 @@ assertArraysEqual(map(numbers, num => num * 2), [2, 4, 6, 8, 20]);
 const original = ["the", "word", "is", "true"];
 map(original, word => word.charAt(word.length - 1));
 assertArraysEqual(original, ["the", "word", "is", "true"]); // should be pass
+*/
 
 
