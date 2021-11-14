@@ -43,5 +43,10 @@ describe('#eqObjects', () => {
     assert.isFalse(eqObject(obj1, obj2));
   });
 
+  it("returns false with if obj1 = { a: { y: 0, z:1 }, b: 2} and other obj2 = (a: {y: 0}, b:2 }", () => {
+    const obj1 = { a: { y: 0, z: 1 }, b: 2 };
+    const obj2 ={ a: {y: 0}, b: 2 }
+    assert.isFalse(eqObject(obj1, obj2));
+  });
 
 });
