@@ -25,4 +25,15 @@ describe('#eqArrays', () => {
     assert.isTrue(eqArrays(array1, array2));
   });
 
+  it("returns true if there are comparing same array with nested elements,array = [2,[3,4]]", () => {
+    const array = [1,[3,4]];
+    assert.isTrue(eqArrays(array, array));
+  });
+
+  it("returns false if there are comparing nested array of [[1],[2,3]] and [1,[2,3]]", () => {
+    const arr1 = [[1],[3,4]];
+    const arr2 = [1,[3,4]];
+    assert.isFalse(eqArrays(arr1, arr2));
+  });
+
 });
