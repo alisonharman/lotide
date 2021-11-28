@@ -1,29 +1,30 @@
 // function takes in two arrays
 // first is the source array and second should be 'items to remove array'
 // returns new array of [source] - [second array]
+
 const without = function(source, itemsToRemove) {
-  let arrayWithRemovedElements = [...source];
+
+  if (!Array.isArray(source) && !Array.isArray(itemsToRemove)) {
+    return;
+  }
+  
+  const newArray = [];
+  let check;
+
   for (let i = 0; i < source.length; i++) {
-    // need to loop through second array and compare each value to testValue
+    check = false;
     for (let j = 0; j < itemsToRemove.length; j++) {
-      if (arrayWithRemovedElements[i] === itemsToRemove[j]) {
-        arrayWithRemovedElements.splice(i, 1);
+      if (itemsToRemove[j] === source[i]) {
+        check = true;
+        break;
       }
     }
+    if (!check) {
+      newArray.push(source[i]);
+    }
   }
-  return arrayWithRemovedElements;
+  return newArray;
 };
 
 module.exports = without;
 
-/*
-//TEST CODE
-const assertArraysEqual = require('./assertArraysEqual');
-assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
-// TEST that original array not modified
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-*/
